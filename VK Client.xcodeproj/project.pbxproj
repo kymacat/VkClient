@@ -11,6 +11,10 @@
 		CF8755CE249EC7B700F5999F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755CD249EC7B700F5999F /* ViewController.swift */; };
 		CF8755D3249EC7B700F5999F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8755D2249EC7B700F5999F /* Assets.xcassets */; };
 		CF8755D6249EC7B700F5999F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8755D4249EC7B700F5999F /* LaunchScreen.storyboard */; };
+		CF8755E7249ECF5600F5999F /* RootAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755E6249ECF5600F5999F /* RootAssembly.swift */; };
+		CF8755E9249ECF9A00F5999F /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755E8249ECF9A00F5999F /* CoreAssembly.swift */; };
+		CF8755EB249ECFC600F5999F /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755EA249ECFC600F5999F /* ServicesAssembly.swift */; };
+		CF8755ED249ED03400F5999F /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755EC249ED03400F5999F /* PresentationAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		CF8755D2249EC7B700F5999F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF8755D5249EC7B700F5999F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF8755D7249EC7B700F5999F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF8755E6249ECF5600F5999F /* RootAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAssembly.swift; sourceTree = "<group>"; };
+		CF8755E8249ECF9A00F5999F /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
+		CF8755EA249ECFC600F5999F /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		CF8755EC249ED03400F5999F /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +60,12 @@
 		CF8755C8249EC7B600F5999F /* VK Client */ = {
 			isa = PBXGroup;
 			children = (
-				CF8755C9249EC7B600F5999F /* AppDelegate.swift */,
+				CF8755DE249ECE9B00F5999F /* PresentationLayer */,
+				CF8755E1249ECEE700F5999F /* ServiceLayer */,
+				CF8755E4249ECF1900F5999F /* CoreLayer */,
 				CF8755CD249EC7B700F5999F /* ViewController.swift */,
+				CF8755E6249ECF5600F5999F /* RootAssembly.swift */,
+				CF8755C9249EC7B600F5999F /* AppDelegate.swift */,
 				CF8755DD249ECA3500F5999F /* Resources */,
 			);
 			path = "VK Client";
@@ -67,6 +79,70 @@
 				CF8755D2249EC7B700F5999F /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CF8755DE249ECE9B00F5999F /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CF8755DF249ECEBE00F5999F /* Assembly */,
+				CF8755E0249ECECD00F5999F /* Modules */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		CF8755DF249ECEBE00F5999F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CF8755EC249ED03400F5999F /* PresentationAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CF8755E0249ECECD00F5999F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CF8755E1249ECEE700F5999F /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CF8755E2249ECEFA00F5999F /* Assembly */,
+				CF8755E3249ECF0700F5999F /* Services */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		CF8755E2249ECEFA00F5999F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CF8755EA249ECFC600F5999F /* ServicesAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CF8755E3249ECF0700F5999F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF8755E4249ECF1900F5999F /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CF8755E5249ECF2600F5999F /* Assembly */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		CF8755E5249ECF2600F5999F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CF8755E8249ECF9A00F5999F /* CoreAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +216,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF8755CE249EC7B700F5999F /* ViewController.swift in Sources */,
+				CF8755EB249ECFC600F5999F /* ServicesAssembly.swift in Sources */,
+				CF8755E7249ECF5600F5999F /* RootAssembly.swift in Sources */,
+				CF8755ED249ED03400F5999F /* PresentationAssembly.swift in Sources */,
+				CF8755E9249ECF9A00F5999F /* CoreAssembly.swift in Sources */,
 				CF8755CA249EC7B600F5999F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
