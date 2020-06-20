@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF8755CA249EC7B600F5999F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755C9249EC7B600F5999F /* AppDelegate.swift */; };
-		CF8755CC249EC7B700F5999F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755CB249EC7B700F5999F /* SceneDelegate.swift */; };
 		CF8755CE249EC7B700F5999F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755CD249EC7B700F5999F /* ViewController.swift */; };
-		CF8755D1249EC7B700F5999F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8755CF249EC7B700F5999F /* Main.storyboard */; };
 		CF8755D3249EC7B700F5999F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8755D2249EC7B700F5999F /* Assets.xcassets */; };
 		CF8755D6249EC7B700F5999F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8755D4249EC7B700F5999F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +16,7 @@
 /* Begin PBXFileReference section */
 		CF8755C6249EC7B600F5999F /* VK Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8755C9249EC7B600F5999F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF8755CB249EC7B700F5999F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF8755CD249EC7B700F5999F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CF8755D0249EC7B700F5999F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF8755D2249EC7B700F5999F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF8755D5249EC7B700F5999F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF8755D7249EC7B700F5999F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,14 +53,20 @@
 			isa = PBXGroup;
 			children = (
 				CF8755C9249EC7B600F5999F /* AppDelegate.swift */,
-				CF8755CB249EC7B700F5999F /* SceneDelegate.swift */,
 				CF8755CD249EC7B700F5999F /* ViewController.swift */,
-				CF8755CF249EC7B700F5999F /* Main.storyboard */,
-				CF8755D2249EC7B700F5999F /* Assets.xcassets */,
-				CF8755D4249EC7B700F5999F /* LaunchScreen.storyboard */,
-				CF8755D7249EC7B700F5999F /* Info.plist */,
+				CF8755DD249ECA3500F5999F /* Resources */,
 			);
 			path = "VK Client";
+			sourceTree = "<group>";
+		};
+		CF8755DD249ECA3500F5999F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF8755D7249EC7B700F5999F /* Info.plist */,
+				CF8755D4249EC7B700F5999F /* LaunchScreen.storyboard */,
+				CF8755D2249EC7B700F5999F /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +129,6 @@
 			files = (
 				CF8755D6249EC7B700F5999F /* LaunchScreen.storyboard in Resources */,
 				CF8755D3249EC7B700F5999F /* Assets.xcassets in Resources */,
-				CF8755D1249EC7B700F5999F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +141,12 @@
 			files = (
 				CF8755CE249EC7B700F5999F /* ViewController.swift in Sources */,
 				CF8755CA249EC7B600F5999F /* AppDelegate.swift in Sources */,
-				CF8755CC249EC7B700F5999F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF8755CF249EC7B700F5999F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF8755D0249EC7B700F5999F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF8755D4249EC7B700F5999F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +208,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,7 +278,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G62NMGFRS3;
-				INFOPLIST_FILE = "VK Client/Info.plist";
+				INFOPLIST_FILE = "VK Client/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +286,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "OGI.VK-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G62NMGFRS3;
-				INFOPLIST_FILE = "VK Client/Info.plist";
+				INFOPLIST_FILE = "VK Client/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "OGI.VK-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
