@@ -7,20 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF5CCBE124A005E3001DC59B /* LoginVCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CCBE024A005E3001DC59B /* LoginVCView.swift */; };
+		CF5CCBE324A0184C001DC59B /* LoginAndPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CCBE224A0184C001DC59B /* LoginAndPasswordView.swift */; };
 		CF8755CA249EC7B600F5999F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755C9249EC7B600F5999F /* AppDelegate.swift */; };
-		CF8755CE249EC7B700F5999F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755CD249EC7B700F5999F /* ViewController.swift */; };
+		CF8755CE249EC7B700F5999F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755CD249EC7B700F5999F /* LoginViewController.swift */; };
 		CF8755D3249EC7B700F5999F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8755D2249EC7B700F5999F /* Assets.xcassets */; };
 		CF8755D6249EC7B700F5999F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8755D4249EC7B700F5999F /* LaunchScreen.storyboard */; };
 		CF8755E7249ECF5600F5999F /* RootAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755E6249ECF5600F5999F /* RootAssembly.swift */; };
 		CF8755E9249ECF9A00F5999F /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755E8249ECF9A00F5999F /* CoreAssembly.swift */; };
 		CF8755EB249ECFC600F5999F /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755EA249ECFC600F5999F /* ServicesAssembly.swift */; };
 		CF8755ED249ED03400F5999F /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8755EC249ED03400F5999F /* PresentationAssembly.swift */; };
+		CF8A97D2249FFAD200C13F74 /* LoginVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8A97D1249FFAD200C13F74 /* LoginVCModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF5CCBE024A005E3001DC59B /* LoginVCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCView.swift; sourceTree = "<group>"; };
+		CF5CCBE224A0184C001DC59B /* LoginAndPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndPasswordView.swift; sourceTree = "<group>"; };
 		CF8755C6249EC7B600F5999F /* VK Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8755C9249EC7B600F5999F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF8755CD249EC7B700F5999F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF8755CD249EC7B700F5999F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CF8755D2249EC7B700F5999F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF8755D5249EC7B700F5999F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF8755D7249EC7B700F5999F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		CF8755E8249ECF9A00F5999F /* CoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
 		CF8755EA249ECFC600F5999F /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		CF8755EC249ED03400F5999F /* PresentationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
+		CF8A97D1249FFAD200C13F74 /* LoginVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,6 @@
 				CF8755DE249ECE9B00F5999F /* PresentationLayer */,
 				CF8755E1249ECEE700F5999F /* ServiceLayer */,
 				CF8755E4249ECF1900F5999F /* CoreLayer */,
-				CF8755CD249EC7B700F5999F /* ViewController.swift */,
 				CF8755E6249ECF5600F5999F /* RootAssembly.swift */,
 				CF8755C9249EC7B600F5999F /* AppDelegate.swift */,
 				CF8755DD249ECA3500F5999F /* Resources */,
@@ -101,6 +106,7 @@
 		CF8755E0249ECECD00F5999F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CF8A97D0249FFAAE00C13F74 /* LoginVC */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -143,6 +149,17 @@
 				CF8755E8249ECF9A00F5999F /* CoreAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CF8A97D0249FFAAE00C13F74 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF8755CD249EC7B700F5999F /* LoginViewController.swift */,
+				CF8A97D1249FFAD200C13F74 /* LoginVCModel.swift */,
+				CF5CCBE024A005E3001DC59B /* LoginVCView.swift */,
+				CF5CCBE224A0184C001DC59B /* LoginAndPasswordView.swift */,
+			);
+			path = LoginVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,12 +232,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8755CE249EC7B700F5999F /* ViewController.swift in Sources */,
+				CF8A97D2249FFAD200C13F74 /* LoginVCModel.swift in Sources */,
+				CF5CCBE124A005E3001DC59B /* LoginVCView.swift in Sources */,
+				CF8755CE249EC7B700F5999F /* LoginViewController.swift in Sources */,
 				CF8755EB249ECFC600F5999F /* ServicesAssembly.swift in Sources */,
 				CF8755E7249ECF5600F5999F /* RootAssembly.swift in Sources */,
 				CF8755ED249ED03400F5999F /* PresentationAssembly.swift in Sources */,
 				CF8755E9249ECF9A00F5999F /* CoreAssembly.swift in Sources */,
 				CF8755CA249EC7B600F5999F /* AppDelegate.swift in Sources */,
+				CF5CCBE324A0184C001DC59B /* LoginAndPasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
