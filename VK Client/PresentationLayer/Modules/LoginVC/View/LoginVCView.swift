@@ -20,14 +20,7 @@ class LoginVCView: UIView {
     
     let loginAndPasswordView = LoginAndPasswordView()
     
-    let loginButton: UIButton = {
-        let button = UIButton()
-        button.layer.cornerRadius = 10
-        button.backgroundColor = .white
-        button.setTitle("Войти", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        return button
-    }()
+    let loginButton = LoginButton()
     
     
     // MARK: - Init
