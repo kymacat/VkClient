@@ -18,6 +18,9 @@ class LoginAndPasswordView: UIView {
                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         field.tintColor = .white
         field.textColor = .white
+        field.keyboardType = .asciiCapable
+        field.keyboardAppearance = .dark
+        field.textContentType = .username
         return field
     }()
     
@@ -27,6 +30,9 @@ class LoginAndPasswordView: UIView {
                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         field.tintColor = .white
         field.textColor = .white
+        field.keyboardType = .asciiCapable
+        field.keyboardAppearance = .dark
+        field.textContentType = .password
         return field
     }()
     

@@ -36,6 +36,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginView.loginButton.isEnabled = false
+        
+        loginView.loginAndPasswordView.loginTextField.delegate = self
+        loginView.loginAndPasswordView.passwordTextField.delegate = self
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -45,3 +50,25 @@ class LoginViewController: UIViewController {
 
 }
 
+// MARK: - TextFieldDelegate
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard
+            let loginText = loginView.loginAndPasswordView.loginTextField.text,
+            let passwordText = loginView.loginAndPasswordView.passwordTextField.text else {
+                return
+        }
+        if loginText != "" && passwordText != "" {
+            loginView.loginButton.isEnabled = true
+        } else {
+            loginView.loginButton.isEnabled = false
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
+    }
+}

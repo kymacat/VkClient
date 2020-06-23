@@ -35,6 +35,9 @@ class LoginButton: UIButton {
     
     override var isEnabled: Bool {
         didSet {
+            guard oldValue != isEnabled else {
+                return
+            }
             if oldValue == true {
                 buttonTouchedIn(with: 0.3)
             } else {
