@@ -37,16 +37,55 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let hideKeyboardRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(hideKeyboardRecognizer)
+        
         loginView.loginButton.isEnabled = false
         
         loginView.loginAndPasswordView.loginTextField.delegate = self
         loginView.loginAndPasswordView.passwordTextField.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
     
+    // MARK: - Keyboard selectors
+    
+    @objc func keyboardWasShown() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.loginView.setConstraintsWithKeyboard()
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    @objc func keyboardWillBeHidden() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.loginView.setConstraintsWithoutKeyboard()
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
 
 }
 

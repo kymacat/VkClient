@@ -37,6 +37,9 @@ class LoginVCView: UIView {
 
     // MARK: - Fill view
     
+    private var constraintsWithoutKeyboard = [NSLayoutConstraint]()
+    private var constraintsWithKeyboard = [NSLayoutConstraint]()
+    
     private func fill() {
         
         self.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
@@ -44,10 +47,20 @@ class LoginVCView: UIView {
         self.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            logoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 100),
-            logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -100),
+        constraintsWithoutKeyboard = [
             logoImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
+            logoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 100),
+            logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -100)
+        ]
+        constraintsWithKeyboard = [
+            logoImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
+            logoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 125),
+            logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -125)
+        ]
+        
+        setConstraintsWithoutKeyboard()
+        
+        NSLayoutConstraint.activate([
             logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor)
         ])
         
@@ -70,5 +83,15 @@ class LoginVCView: UIView {
             loginButton.trailingAnchor.constraint(equalTo: loginAndPasswordView.trailingAnchor),
             loginButton.heightAnchor.constraint(equalTo: loginAndPasswordView.heightAnchor, multiplier: 0.5)
         ])
+    }
+    
+    func setConstraintsWithoutKeyboard() {
+        NSLayoutConstraint.deactivate(constraintsWithKeyboard)
+        NSLayoutConstraint.activate(constraintsWithoutKeyboard)
+    }
+    
+    func setConstraintsWithKeyboard() {
+        NSLayoutConstraint.deactivate(constraintsWithoutKeyboard)
+        NSLayoutConstraint.activate(constraintsWithKeyboard)
     }
 }
